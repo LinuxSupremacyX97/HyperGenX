@@ -14,11 +14,11 @@ import asyncio
 from pyrogram import Client
 from dotenv import load_dotenv
 
-API_KEY = int(input("Enter API KEY: "))
-API_HASH = input("Enter API HASH: ")
-with Client(':memory:', api_id=API_KEY, api_hash=API_HASH) as app:
+API_KEY = int(input("Enter API_ID: "))
+API_HASH = input("Enter API_HASH: ")
+with Client('in_memory=True', api_id=API_KEY, api_hash=API_HASH) as app:
 	app.send_message(
 	    "me",
-	    f"#HyperGenX | Repl - https://replit.com/@NotShroudX97/HyperGenX | @UsergeXForkUpdates #HU_STRING_SESSION\n\n```{app.export_session_string()}```"
+	    f"#HU_STRING_SESSION\n\n```{app.export_session_string()}```"
 	)
-	print("Done!, #HyperGenX String Session Has Been Generated & Sent To Your Saved Messages!")
+	print("Noice!, #HyperGenX String Session Has Been Generated & Sent To Your Saved Messages")
